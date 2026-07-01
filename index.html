@@ -4,13 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odin Recipes</title>
+    <style>
+        
+        body{
+            background-color: rgb(76, 163, 156);
+        }
+        div#header{ /*id selector is # (unique to an element)*/
+            background-color: rgb(0, 255, 234);
+            font-family: 'Courier New', Courier, monospace; /*"font family name", generic family name*/
+            font-size: 16px;
+            font-weight: 700;
+        }
+        
+        div#menu{      /* class selector is period (can be applied to multiple elements)*/
+            background-color: blanchedalmond;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        div.padding{
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-top: 3px;
+            padding-bottom: 3px;
+        }
+
+        div.centering{
+            text-align: center;
+        }
+
+        div.padding,        /*Can use comma to access both class to use similar declarations*/
+        div#menu{
+                color: blue;
+        }
+
+        .centering.padding{ /*sleect any element that has both (no spaces)*/
+            color: black;
+        }
+
+        .centering.padding#conInfo{ /*sleect any element and ID (no spaces)*/
+            color: whitesmoke;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Odin Recipe</h1>
-        <ul>
-            <li><a href="recipes/lasagna.html"> Lasagna Recipe</a></li>
-            <li><a href="recipes/LemonTexas.html"> Lemon Texas Sheet Cake Recipe</a></li>
-        </ul>
+    <div id="header" class="centering">
+        <h1>Odin Recipe</h1>
+    </div>
+        <div class="padding" id="menu">          <!--difference between classes and IDs is that an element can only have one ID -->
+            <ul>
+                <li><a href="recipes/lasagna.html"> Lasagna Recipe</a></li>
+                <li><a href="recipes/LemonTexas.html"> Lemon Texas Sheet Cake Recipe</a></li>
+            </ul>
+        </div>
+
+        <div class="centering padding"> <!-- chaining selector-->
+            <p> <q>In shadow there is light</q></p>
+        </div>
+
+        <div class="centering padding" id="conInfo"> <!-- chaining selector-->
+            <p> For more information you can contact us through the following medium</p>
+        </div>
+
+        
+
+
     
 </body>
 </html>
